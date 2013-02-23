@@ -1,5 +1,6 @@
 <?php
 
+// Jabber ID erstellen
 function create_jabber_id($user_id, $nick) {
 	$onick = preg_replace('~[^a-z0-9_]~i', '_', $nick);
 	$onick = preg_replace('~__+~i', '_', $onick);
@@ -15,7 +16,8 @@ function create_jabber_id($user_id, $nick) {
 
 function page_redir($location) {
 	$location = '/_redir/'.(mt_rand()^time()).'/'.ltrim($location, '/');
-	if(IS_AJAX) {
+	if(IS_AJAX) 
+	{
 		G::$json_data['keep_loading'] = true;
 		G::$json_data['s1'][] = "location='$location';";
 		echo json_encode(G::$json_data);

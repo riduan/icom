@@ -1,5 +1,10 @@
 <?php
 
+//
+//	DIE KLASSE G SCHEINT EINE ART ÜBERKLASSE ZU SEIN, WELCHE ALLE INFORMATIONEN FÜR DEN
+//	SEITENAUFBAU BEREITSTELLT. 
+//
+
 class G {
 	public static $json_data;
 	
@@ -7,13 +12,13 @@ class G {
 	public static $LANG_TIME;
 	public static $LANG_JUST_NOW;
 	
-	public static $SITE_TITLE;
-	public static $META_KEYWORDS;
-	public static $META_DESCRIPTION;
+	public static $SITE_TITLE;			#	Seitentitel
+	public static $META_KEYWORDS;		#	Suchmaschinen Keywords
+	public static $META_DESCRIPTION;	#	Suchmaschinenbeschreibung
 	
 	public static $USER_INTERACTED = false;
 	
-	public static $DEFAULT_PRIVILEGES;
+	public static $DEFAULT_PRIVILEGES;	#	!!!	Benutzerberechtigungen
 }
 
 G::$json_data = ['e' => [], 's1' => [], 's' => [], 'keep_loading' => false];
